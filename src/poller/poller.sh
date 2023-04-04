@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 MSA_API_SERVICE_HOST=${1:-"api"}
 MSA_API_SERVICE_PORT=${2:-"8080"}
 API_URL="${MSA_API_SERVICE_HOST}:${MSA_API_SERVICE_PORT}"

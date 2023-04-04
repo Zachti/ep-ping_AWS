@@ -18,7 +18,7 @@ function ping(callback) {
 
     operation.attempt(function (currentAttempt) {
         try {
-            var client = createClient({
+            const client = createClient({
                 url: process.env.REDIS_URL,
             });
 

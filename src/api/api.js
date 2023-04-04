@@ -8,13 +8,13 @@ const app = express();
 
 const wsInstance = require('express-ws')(app);
 
-var config = require('./config/config.js');
+const config = require('./config/config.js');
 
 const redis_pass = config.get('redis_pass')
-var cache_host = 'redis://' + config.get('redis_host') + ':' + config.get('redis_port');
+let cache_host = 'redis://' + config.get('redis_host') + ':' + config.get('redis_port');
 
 if (process.env.REDIS_URL != null) {
-    var cache_host = process.env.REDIS_URL;
+    cache_host = process.env.REDIS_URL;
 }
 
 // enable prometheus stats

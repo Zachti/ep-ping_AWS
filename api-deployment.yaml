@@ -2,23 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: redis
-  name: redis
+    app: api
+  name: api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: redis
+      app: api
   strategy: {}
   template:
     metadata:
       labels:
-        app: redis
+        app: api
     spec:
       containers:
-      - image: redis:5
-        name: redis
+      - image: 249153082193.dkr.ecr.us-east-1.amazonaws.com/api:latest
+        name: api
         ports:
-        - containerPort: 6379
+        - containerPort: 8080
         resources: {}
 status: {}

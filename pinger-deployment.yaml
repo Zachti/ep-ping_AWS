@@ -2,23 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: redis
-  name: redis
+    app: pinger
+  name: pinger
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: redis
+      app: pinger
   strategy: {}
   template:
     metadata:
       labels:
-        app: redis
+        app: pinger
     spec:
       containers:
-      - image: redis:5
-        name: redis
-        ports:
-        - containerPort: 6379
+      - image: 249153082193.dkr.ecr.us-east-1.amazonaws.com/pinger:latest
+        name: pinger
         resources: {}
 status: {}

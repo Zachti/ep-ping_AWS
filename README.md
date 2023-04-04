@@ -12,16 +12,6 @@ Optional - yet recommanded:
 - [`Kustomize`](https://kubernetes-sigs.github.io/kustomize/installation/)
 - [`chromium`](https://www.chromium.org/Home) callable via the `chromium` binary
 
-
-## 🥅 Todays Goal's
-
-Deploy a microservice architecture app
-
-- redis
-- api      (./src/api)
-- consumer (./src/pinger)
-- client   (./src/poller)
-
 ### Background on ping app
 
 1. Use `redis` to store pings, using `redis:latest@sha256:a89cb097693dd354de598d279c304a1c73ee550fbfff6d9ee515568e0c749cfe` to ensure these LAB's function as expected altough `latest` should work ;)
